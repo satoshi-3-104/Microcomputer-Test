@@ -38,10 +38,7 @@ Serial PC(USBTX, USBRX, 115200);
 int main()
 {
   control_ticker.start();
-  for (int i = 0; i < 8; i++)
-  {
-    float enco_now[i] = 0.0f;
-  }
+  float motor_cycleout
   for (;;)
   {
     if (control_ticker.read() >= CONTROL_CYCLE)
@@ -49,7 +46,7 @@ int main()
       control_ticker.reset();
       if (SW.read() == 0)
       {
-         float motor_cycleout = 10.0f;
+         motor_cycleout = 10.0f;
       } //スイッチを押すとき
       else
       {
