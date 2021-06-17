@@ -14,14 +14,14 @@
 DigitalIn SW(A1); //303スイッチ
 
 /************************************モータの設定************************************/
-// dc_motor_1 Motor_1(PB_0, PF_1, 1);     //右前　MD_0
-// dc_motor_1 Motor_2(PA_7, PB_5, 1 );    //右前　MD_1
-// dc_motor_1 Motor_3(PA_3, PA_1, 1 );    //右前　MD_2
+// dc_motor_1 Motor_0(PB_0, PF_1, 1);     //右前　MD_0
+// dc_motor_1 Motor_1(PA_7, PB_5, 1 );    //右前　MD_1
+// dc_motor_1 Motor_2(PA_3, PA_1, 1 );    //右前　MD_2
 
 /**********************************エンコーダの設定**********************************/
-// rotary_encoder ENC_1(PB_7, PB_6, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_0
-// rotary_encoder ENC_2(PB_1, PF_0, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_1
-// rotary_encoder ENC_3(PA_9, PA_8, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_2
+// rotary_encoder ENC_0(PB_7, PB_6, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_0
+// rotary_encoder ENC_1(PB_1, PF_0, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_1
+// rotary_encoder ENC_2(PA_9, PA_8, NC, 512, rotary_encoder::X4_ENCODING);     //ENC_2
 
 /*********************************servo_motorの設定**********************************/
 // ServoMotor servo(A6, 180.0); //SRV0
@@ -74,19 +74,19 @@ int main()
       }
       
       /********************* エンコーダー ********************/
-      // enco_now[0] = ENC_Mi.getRad(); //ENC_0
-      // enco_now[1] = ENC_Mj.getRad(); //ENC_1
-      // enco_now[2] = ENC_Mk.getRad(); //ENC_2
+      // enco_now[0] = ENC_0.getRad(); //ENC_0
+      // enco_now[1] = ENC_1.getRad(); //ENC_1
+      // enco_now[2] = ENC_2.getRad(); //ENC_2
 
       /********************* モーター ************************/
-      // Motor_i.drive(motor_cycleout); //MD_0
-      // Motor_j.drive(motor_cycleout); //MD_1
-      // Motor_k.drive(motor_cycleout); //MD_2
+      // Motor_0.drive(motor_cycleout); //MD_0
+      // Motor_1.drive(motor_cycleout); //MD_1
+      // Motor_2.drive(motor_cycleout); //MD_2
 
       /********************* エンコーダー ********************/
-      // PC.printf("E7==> %f\r\n", ENC_Mi.getRad());
-      // PC.printf("E7==> %f\r\n", ENC_Mj.getRad());
-      // PC.printf("E7==> %f\r\n", ENC_Mk.getRad());
+      // PC.printf("E7==> %f\r\n", ENC_0.getRad());
+      // PC.printf("E7==> %f\r\n", ENC_1.getRad());
+      // PC.printf("E7==> %f\r\n", ENC_2.getRad());
     } //制御周期
   } //while文
 } //main文
