@@ -38,7 +38,7 @@ Serial PC(USBTX, USBRX, 115200);
 int main()
 {
   control_ticker.start();
-  float motor_cycleout
+  float motor_cycleout;
   for (;;)
   {
     if (control_ticker.read() >= CONTROL_CYCLE)
