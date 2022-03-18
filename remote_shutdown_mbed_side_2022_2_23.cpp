@@ -39,7 +39,7 @@ int main(int argc, char **argv)
   ControlTicker.start();
   LastConnection.start();
   ros::NodeHandle n;
-  n.getHardware()->setBaud(115200);
+  n.getHardware()->setBaud(460800);
   n.initNode();
   n.subscribe(sub_emergency);
 
